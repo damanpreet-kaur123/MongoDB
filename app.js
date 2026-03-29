@@ -18,6 +18,10 @@ mongoose
   .then(() => console.log("MongoDB connected via Mongoose"))
   .catch((err) => console.error("MongoDB connection error:", err));
 
+app.get('/', (req,res) => {
+  res.send('Mongoose run successfully');
+});
+
 app.use("/api", myRoute);
 
 app.listen(PORT, () => {
